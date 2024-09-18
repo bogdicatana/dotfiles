@@ -1,0 +1,4 @@
+xdg-icon-resource install --size 128 wave-avatar.png
+hyprctl dispacth exit
+hyprctl dispacth exec [shell command]
+wofi --show drun

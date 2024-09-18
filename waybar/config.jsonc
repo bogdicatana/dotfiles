@@ -1,0 +1,153 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top", // Waybar at top layer
+  // Choose the order of the modules
+  // Modules configuration
+  "modules-left": [
+    "custom/bindMenu",
+    "custom/right-arrow-dark",
+    "custom/right-arrow-light",
+    "hyprland/workspaces",
+    "custom/right-arrow-dark",
+    "custom/right-arrow-light",
+    "custom/hyprpicker",
+    "custom/right-arrow-dark",
+    "custom/right-arrow-light",
+    "custom/playerctl",
+    "custom/right-arrow-dark",
+  ],
+  "modules-center": [
+    "custom/left-arrow-dark",
+    "clock#1",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "clock#2",
+    "custom/right-arrow-dark",
+    "custom/right-arrow-light",
+    "clock#3",
+    "custom/right-arrow-dark",
+  ],
+  "modules-right": [
+    "custom/left-arrow-dark",
+    "custom/weather",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "pulseaudio",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "memory",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "cpu",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "disk",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "tray",
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "default": " ",
+    },
+  },
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 30,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json",
+  },
+  "custom/left-arrow-dark": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/left-arrow-light": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/right-arrow-dark": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/right-arrow-light": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/hyprpicker": {
+    "format": " 󰈋 ",
+    "on-click": "hyprpicker -a -f hex",
+    "on-click-right": "hyprpicker -a -f rgb",
+    "tooltip": false,
+  },
+  "custom/playerctl": {
+    "format": "{icon} <span>{}</span> ",
+    "return-type": "json",
+    "max-length": 64,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "format-icons": {
+      "Playing": "<span foreground='#fdf6e3'> 󰒮 󰏥 󰒭</span>",
+      "Paused": "<span foreground='#928374'> 󰒮 󰐌 󰒭</span>",
+    },
+    "tooltip": false,
+  },
+  "custom/bindMenu": {
+    "tooltip": true,
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/bindMap.sh",
+    "return-type": "json",
+    "on-click": "~/.config/waybar/scripts/agsRunClose.sh",
+  },
+
+  "clock#1": {
+    "format": "{:%a}",
+    "tooltip": false,
+  },
+  "clock#2": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "clock#3": {
+    "format": "{:%m-%d}",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume:2}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphones": "",
+      "default": ["", ""],
+    },
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+  },
+  "memory": {
+    "interval": 5,
+    "format": "Mem {}%",
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "CPU{usage:2}%",
+  },
+  "disk": {
+    "interval": 5,
+    "format": "Disk{percentage_used:2}%",
+    "path": "/",
+  },
+  "tray": {
+    "icon-size": 20,
+  },
+}

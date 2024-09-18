@@ -1,0 +1,64 @@
+window.menu {
+    background-color: #202023;
+    border-radius: 10px;
+    font-family: Hack Nerd Font;
+}
+
+.logout {
+    background-color: transparent;
+    color: green;
+    border-radius: 500px;
+}
+
+.logout:hover {
+    background-color: green;
+    color: white;
+}
+
+.power {
+    background-color: transparent;
+    color: red;
+    border-radius: 500px;
+}
+
+.power:hover {
+    background-color: red;
+    color: white;
+}
+
+.sleep {
+    background-color: transparent;
+    color: yellow;
+    border-radius: 500px;
+}
+
+.sleep:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.restart {
+    background-color: transparent;
+    color: lightblue;
+    border-radius: 500px;
+}
+
+.restart:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.search {
+    background-color: transparent;
+    color: white;
+    border-radius: 500px;
+}
+
+.search:hover {
+    background-color: white;
+    color: black;
+}
+
+.applauncher {
+    background-color: #202023;
+}
