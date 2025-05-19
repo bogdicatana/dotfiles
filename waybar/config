@@ -1,0 +1,211 @@
+[
+{
+  "output":"DP-1",
+  "layer": "top",
+  "position": "left",
+  "margin": "2 0 2 2",
+  "spacing": 2,
+  "width": 33,
+  "modules-left": [
+    "clock",
+    "custom/sep",
+    "tray",
+    "custom/music"
+  ],
+  "modules-center": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-right": [
+    "custom/weather",
+    "custom/sep",
+    "cpu",
+    "temperature",
+    "custom/sep",
+    "custom/gpu",
+    "custom/sep",
+    "memory",
+    "custom/sep",
+    "pulseaudio",
+    "custom/powermenu"
+  ],
+  "custom/sep": {
+    "format": "",
+    "tooltip":false
+  },
+  "sway/mode": {
+    "rotate":90,
+    "format": "{} ",
+    "max-length": 50
+  },
+  "custom/powermenu": {
+    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "format": "󰣇",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "format": "{}",
+    "on-click": "activate"
+  },
+  "clock": {
+    "tooltip": true,
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%a-%Y-%m-%d}",
+    "on-click": "~/.config/waybar/scripts/calendar.sh"
+  },
+  "tray": {
+    "icon-size": 18,
+    "show-passive-items": "true"
+  },
+  "custom/gpu": {
+    "rotate": 90,
+    "exec": "~/.config/waybar/scripts/gpuStats.sh",
+    "interval": 3,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "custom/weather": {
+    "rotate": 90,
+    "exec":"~/.config/waybar/scripts/weatherTemp.sh",
+    "return-type":"json",
+    "interval": 1800,
+    "on-click": "~/.config/waybar/scripts/weatherTemp.sh & dunstify \"Weather Updated\" \"Pinged wttr.in to get the current weather\"",
+    "format": {}
+  },
+  "cpu": {
+    "rotate": 90,
+    "interval": 1,
+    "format": "{usage}%"
+  },
+  "temperature": {
+    "rotate":90,
+  	"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+  	"format": " ",
+    "tooltip-format": "CPU Temp: {temperatureC}°C"
+  },
+  "memory": {
+    "rotate":90,
+    "interval": 10,
+    "format": "{}% ",
+    "max-length": 10
+  },
+  "pulseaudio": {
+    "rotate": 90,
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 3,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "custom/music": {
+    "rotate": 90,
+    "exec": "~/.config/waybar/scripts/customMusic.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "max-length": 25
+  }
+},
+
+// SECOND SCREEN
+{
+  "output":"HDMI-A-1",
+  "layer": "top",
+  "position": "left",
+  "margin": "2 0 2 2",
+  "spacing": 2,
+  "width": 33,
+  "modules-left": [
+    "clock",
+    "custom/sep",
+    "tray",
+    "custom/music"
+  ],
+  "modules-center": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-right": [
+    "cpu",
+    "temperature",
+    "custom/sep",
+    "custom/gpu",
+    "custom/sep",
+    "memory",
+    "custom/powermenu"
+  ],
+  "custom/sep": {
+    "format": "",
+    "tooltip":false
+  },
+  "sway/mode": {
+    "rotate":90,
+    "format": "{} ",
+    "max-length": 50
+  },
+  "custom/powermenu": {
+    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "format": "󰣇",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "format": "{}",
+    "on-click": "activate"
+  },
+  "clock": {
+    "tooltip": true,
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%a-%Y-%m-%d}",
+    "on-click": "~/.config/waybar/scripts/calendar.sh"
+  },
+  "tray": {
+    "icon-size": 18,
+    "show-passive-items": "true"
+  },
+  "cpu": {
+    "rotate": 90,
+    "interval": 1,
+    "format": "{usage}%"
+  },
+  "temperature": {
+    "rotate":90,
+  	"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+  	"format": " ",
+    "tooltip-format": "CPU Temp: {temperatureC}°C"
+  },
+  "custom/gpu": {
+    "rotate": 90,
+    "exec": "~/.config/waybar/scripts/gpuStats.sh",
+    "interval": 3,
+    "return-type": "json",
+    "format": "{}"
+  },
+  "memory": {
+    "rotate":90,
+    "interval": 10,
+    "format": "{}% ",
+    "max-length": 10
+  },
+  "custom/music": {
+    "rotate": 90,
+    "exec": "~/.config/waybar/scripts/customMusic.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "max-length": 25
+  }
+}
+]

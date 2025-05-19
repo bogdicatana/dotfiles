@@ -1,0 +1,97 @@
+@import "mocha.css";
+
+* {
+    border: none;
+    font-family: "Hack Nerd Font";
+    font-size: 17px;
+    font-weight: 600;
+    background: none;
+}
+
+window#waybar {
+    color: @text;
+}
+.modules-left,
+.modules-right,
+.modules-center {
+    border: 2px solid alpha(@mauve, 0.3);
+    border-radius: 6px;
+    background: @mantle;
+    padding: 12px 0;
+}
+tooltip {
+    color: @text;
+    background-color: @crust;
+    text-shadow: none;
+}
+
+tooltip * {
+    color: #a5adcb;
+    text-shadow: none;
+}
+.modules-center {
+}
+
+#custom-sep {
+    color: #494d64;
+    margin: 4px 0;
+}
+#workspaces,
+#clock,
+#custom-bluetooth_devices,
+#custom-powermenu,
+#pulseaudio,
+#tray {
+}
+#workspaces {
+    border-radius: 4px;
+}
+#workspaces button {
+    color: @surface2;
+    background: none;
+    padding: 0;
+}
+#workspaces button:hover {
+    color: @green;
+}
+#workspaces button.focused {
+    color: @lavender;
+}
+#temperature {
+    color: @green;
+}
+#clock {
+    font-weight: 600;
+    color: @teal;
+}
+#pulseaudio {
+    color: @peach;
+}
+#pulseaudio.muted {
+    color: @red;
+}
+
+#custom-powermenu {
+    margin: 12px 5px 0 0;
+    color: @blue;
+}
+
+#custom-music {
+    color: @rosewater;
+}
+
+#memory {
+    color: @mauve;
+}
+
+#mode {
+    color: @red;
+}
+
+#cpu {
+    color: @green;
+}
+
+#custom-gpu {
+    color: @red;
+}

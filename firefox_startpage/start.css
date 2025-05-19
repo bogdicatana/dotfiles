@@ -1,0 +1,242 @@
+:root {
+    --crust: #11111b;
+    --overlay0: #6c7086;
+    --overlay2: #9399b237;
+    --red: #d20f39;
+    --maroon: #e64553;
+    --base: #1e1e2e;
+    --text: #cdd6f4;
+    --text1: #11111b;
+    --mantle: #181825;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --peach: #fab387;
+    --surface0: #313244;
+    --shadow: black;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --teal: #94e2d5;
+    --sky: #89b4fa;
+    --subtext0: #a6adc8;
+    --flamingo: #f2cdcd;
+    --rosewater: #f5e0dc;
+}
+
+.icons {
+    font-family: "Hack Nerd Font";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 10px;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -moz-font-feature-settings: "liga";
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: Hack Nerd Font;
+    background: var(--mantle);
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    color: var(--text);
+    text-align: center;
+    height: 100vh;
+    user-select: none;
+}
+
+.middle_slider {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: fit-content;
+}
+
+#view-wrapper {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+    margin: 20px;
+    background-color: var(--crust);
+}
+
+.view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: var(--crust);
+    transform: translateX(100%);
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.category {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.category h3 {
+    color: var(--text);
+    font-family: "Hack Nerd Font";
+    font-size: 1.4em;
+    margin-bottom: 0%;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    width: 90%;
+    background: var(--overlay2);
+}
+
+.view.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.logo-buttons {
+    display: grid;
+    height: 400px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper {
+    margin-left: 2em;
+    display: flex;
+}
+
+#buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    font-family: Hack Nerd Font;
+    color: var(--lavender);
+    font-size: 15px;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.2s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-button.active {
+    font-weight: bold;
+    background: -webkit-linear-gradient(90deg, var(--peach), var(--red));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.search-box {
+    gap: 20px;
+    width: 900px;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1em;
+    font-family: "Hack Nerd Font";
+    background-color: var(--base);
+    color: var(--text);
+    border: 1px solid var(--overlay0);
+    border-radius: 12px;
+    outline: none;
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--lavender);
+    box-shadow: 0 0 8px var(--lavender);
+}
+
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-family: "Hack Nerd Font";
+    background: linear-gradient(90deg, var(--peach), var(--red));
+    color: var(--text1);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.links {
+}
+
+.links a {
+    display: inline-flex;
+    margin: 10px 15px;
+    background-color: var(--base);
+    /* border-radius: 20px; */
+    padding: 0.5rem 1.25rem;
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 1.2em;
+    transition: all 0.2s;
+    box-shadow:
+        0 4px #1e2030,
+        0 5px 10px rgb(0 0 0 / 20%);
+}
+
+.links a:hover {
+    color: var(--green);
+    transform: translate(0, 4px);
+    box-shadow:
+        0 0 rgba(0, 0, 0, 0.25),
+        0 0 0 rgba(0, 0, 0, 0.5),
+        0 -0px 5px rgba(0, 0, 0, 0.1);
+}

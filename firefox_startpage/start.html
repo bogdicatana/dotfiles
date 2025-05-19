@@ -1,0 +1,416 @@
+<!-- file:~/.config/firefox_startpage/start.html -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home</title>
+        <link rel="stylesheet" href="start.css" />
+    </head>
+    <body>
+        <div class="middle_slider">
+            <div class="main-content">
+                <div class="logo-buttons">
+                    <div class="button-wrapper">
+                        <button class="nav-button active" data-view="1">
+                            <span
+                                class="icons"
+                                style="color: var(--blue); font-size: 50px"
+                                >󰌹</span
+                            >
+                            Bookmarks
+                        </button>
+                        <button class="nav-button" data-view="2">
+                            <span
+                                class="icons"
+                                style="
+                                    color: var(--pink);
+                                    font-size: 50px;
+                                    margin-left: 2px;
+                                "
+                                ></span
+                            >
+                            Dev
+                        </button>
+                        <button class="nav-button" data-view="3">
+                            <span
+                                class="icons"
+                                style="color: var(--peach); font-size: 50px"
+                                >󰖔</span
+                            >
+                            Chill
+                        </button>
+                    </div>
+                    <span
+                        class="icons"
+                        style="
+                            background: -webkit-linear-gradient(
+                                90deg,
+                                var(--peach),
+                                var(--red)
+                            );
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            font-size: 190px;
+                            font-family: Hack Nerd Font;
+                        "
+                    >
+                        
+                    </span>
+                </div>
+
+                <div id="view-wrapper">
+                    <div
+                        id="view1"
+                        class="view active"
+                        style="
+                            transform: translateX(0%);
+                            border-color: var(--blue);
+                            border-width: 20px;
+                            border-radius: 50px;
+                        "
+                    >
+                        <div class="category">
+                            <h3>Social</h3>
+                            <div class="links">
+                                <a
+                                    href="https://discord.com/app"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--blue);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        
+                                    </span>
+                                    Discord
+                                </a>
+                                <a
+                                    href="https://www.reddit.com"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--maroon)"
+                                    >
+                                        󰑍
+                                    </span>
+                                    Reddit
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="category">
+                            <h3>Workspace</h3>
+                            <div class="links">
+                                <a
+                                    href="https://mail.google.com"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--peach)"
+                                    >
+                                        󰊫
+                                    </span>
+                                    Gmail
+                                </a>
+                                <a
+                                    href="https://calendar.google.com/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--flamingo)"
+                                    >
+                                        󰃭
+                                    </span>
+                                    Calendar
+                                </a>
+                                <a
+                                    href="https://drive.google.com/drive/home"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--pink)"
+                                    >
+                                        󰊶
+                                    </span>
+                                    Drive
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="category">
+                            <h3>Media</h3>
+                            <div class="links">
+                                <a
+                                    href="https://news.ycombinator.com"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--teal)"
+                                    >
+                                        
+                                    </span>
+                                    Hacker News
+                                </a>
+                                <a
+                                    href="https://arstechnica.com/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--pink)"
+                                    >
+                                        󱀁
+                                    </span>
+                                    Ars Technica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view2" class="view">
+                        <div class="category">
+                            <h3>Tools</h3>
+                            <div class="links">
+                                <a href="https://github.com/" target="_blank">
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--teal);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        
+                                    </span>
+                                    Github
+                                </a>
+                                <a
+                                    href="https://www.figma.com/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--sky)"
+                                    >
+                                        
+                                    </span>
+                                    Figma
+                                </a>
+                                <a href="https://chatgpt.com" target="_blank">
+                                    <span
+                                        class="icons"
+                                        style="color: var(--pink)"
+                                    >
+                                        󰍲
+                                    </span>
+                                    ChatGPT
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="category">
+                            <h3>Training</h3>
+                            <div class="links">
+                                <a
+                                    href="https://leetcode.com/problemset/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--peach);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        
+                                    </span>
+                                    Leetcode
+                                </a>
+                                <a
+                                    href="https://adventofcode.com/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--yellow)"
+                                    >
+                                        
+                                    </span>
+                                    Advent of Code
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="category">
+                            <h3>Resources</h3>
+                            <div class="links">
+                                <a href="https://devdocs.io/" target="_blank">
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--flamingo);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        
+                                    </span>
+                                    DevDocs
+                                </a>
+                                <a
+                                    href="https://doc.rust-lang.org/book/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--red)"
+                                    >
+                                        
+                                    </span>
+                                    Rust Book
+                                </a>
+                                <a
+                                    href="https://typst.app/docs/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--rosewater)"
+                                    >
+                                        
+                                    </span>
+                                    Typst
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view3" class="view">
+                        <div class="category">
+                            <h3>Gaming</h3>
+                            <div class="links">
+                                <a
+                                    href="https://store.steampowered.com/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--rosewater);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        󰓓
+                                    </span>
+                                    Steam
+                                </a>
+                                <a
+                                    href="https://www.gog.com/en/"
+                                    target="_blank"
+                                >
+                                    <span class="icons" style="color: white">
+                                        󰮡
+                                    </span>
+                                    GOG
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="category">
+                            <h3>Video</h3>
+                            <div class="links">
+                                <a href="https://youtube.com/" target="_blank">
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--red);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        󰗃
+                                    </span>
+                                    Youtube
+                                </a>
+                                <a
+                                    href="https://www.netflix.com/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--peach)"
+                                    >
+                                        󰝆
+                                    </span>
+                                    Netflix
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="category">
+                            <h3>Music</h3>
+                            <div class="links">
+                                <a
+                                    href="https://youtube.com/playlist?list=PLeGyvkbCZIbZiKdkgcknYtOyDIKowObNd&si=4P8MsCtVgsWfPzFw"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="
+                                            color: var(--maroon);
+                                            margin-right: 4px;
+                                        "
+                                    >
+                                        󰲸
+                                    </span>
+                                    Playlist
+                                </a>
+                                <a
+                                    href="https://musicforprogramming.net/latest/"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="icons"
+                                        style="color: var(--yellow)"
+                                    >
+                                        󱎥
+                                    </span>
+                                    musicForProgramming();
+                                </a>
+                                <a href="https://radio.garden/" target="_blank">
+                                    <span
+                                        class="icons"
+                                        style="color: var(--flamingo)"
+                                    >
+                                        󰐹
+                                    </span>
+                                    Radio Garden
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="https://www.duckduckgo.com/" method="get">
+                <div class="search-box" style="display: flex">
+                    <input
+                        type="text"
+                        name="q"
+                        placeholder="Search with the duck..."
+                    />
+                    <input
+                        type="submit"
+                        style="font-family: Hack Nerd Font; font-size: 24px"
+                        value="󱁄"
+                    />
+                </div>
+            </form>
+        </div>
+
+        <script src="start.js"></script>
+    </body>
+</html>
