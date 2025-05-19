@@ -13,6 +13,9 @@ return {
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
+        delay = function()
+            return 0
+        end,
         config = function()
             require("which-key").setup()
         end,
