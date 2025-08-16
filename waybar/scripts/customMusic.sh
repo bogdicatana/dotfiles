@@ -7,7 +7,7 @@ escape_pango_json() {
   input="${input//&/&amp;}"
   input="${input//</&lt;}"
   input="${input//>/&gt;}"
-  input="${input//\'/&apos;}"
+  input="${input//\'/&}"
   echo "$input"
 }
 

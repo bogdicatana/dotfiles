@@ -107,7 +107,7 @@
       ]
     },
     "scroll-step": 3,
-    "on-click": "pavucontrol",
+    "on-click": "GTK_THEME=Adwaita:dark pavucontrol",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "custom/music": {
