@@ -16,21 +16,26 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
-            lspconfig.pyright.setup({})
-            lspconfig.ts_ls.setup({})
-            lspconfig.clangd.setup({})
-            lspconfig.rust_analyzer.setup({})
-            lspconfig.tinymist.setup({
-                settings = {
-                    formatterMode = "typstyle",
-                    exportPdf = "onType",
-                    semanticTokens = "disable"
-                }
-            })
-            -- Add more servers as needed
-        end,
+		vim.lsp.enable(
+			'clangd', 'cssls', 'html', 'lua_ls', 'ts_ls', 'pyright', 'rust_analyzer', 'tinymist',
+			'sqlls'
+		),
+   --      config = function()
+   --          local lspconfig = require("lspconfig")
+			-- --local lspconfig = vim.lsp.config()
+   --          lspconfig.lua_ls.setup({})
+   --          lspconfig.pyright.setup({})
+   --          lspconfig.ts_ls.setup({})
+   --          lspconfig.clangd.setup({})
+   --          lspconfig.rust_analyzer.setup({})
+   --          lspconfig.tinymist.setup({
+   --              settings = {
+   --                  formatterMode = "typstyle",
+   --                  exportPdf = "onType",
+   --                  semanticTokens = "disable"
+   --              }
+   --          })
+   --          -- Add more servers as needed
+   --      end,
     },
 }
